@@ -1,6 +1,7 @@
 import { Text, TouchableOpacity } from "react-native";
 
-export const Button =() => {
+
+export const Button =(props) => {
     return (
 
         <TouchableOpacity
@@ -15,8 +16,8 @@ export const Button =() => {
             alignItems:'center',
             justifyContent: 'center'
             
-        }}>
-             <Text>Salvar</Text>
+        }} onPress={props.handleSave}>
+             <Text>Save</Text>
 
         </TouchableOpacity>
    

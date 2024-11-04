@@ -5,7 +5,8 @@ export const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#FCE170'
+        backgroundColor: '#FCE170',
+    
 
     },
 
@@ -13,6 +14,7 @@ export const styles = StyleSheet.create({
         color: '#FF0000',
         fontWeight: 'bold',
         fontSize: 16,
+        marginTop:5,
 
     },
 
@@ -23,6 +25,8 @@ export const styles = StyleSheet.create({
         borderWidth:5,
         borderColor:'#FF0000',
         borderRadius:50,
+        marginBottom:5,
     }
+
 
 })

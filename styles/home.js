@@ -12,8 +12,17 @@ export const styles = StyleSheet.create({
     text: {
         color: '#FF0000',
         fontWeight: 'bold',
-        fontSize: 24,
+        fontSize: 16,
 
     },
+
+    image:{
+        width: 90,
+        height: 90,
+        borderStyle:'solid',
+        borderWidth:5,
+        borderColor:'#FF0000',
+        borderRadius:50,
+    }
 
 })

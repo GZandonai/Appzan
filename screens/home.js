@@ -1,31 +1,21 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text,Image } from "react-native";
+import { styles } from "../styles/home.js";
+import { Button } from "../components/buttons.js"
 
 
 export default function InicialScreen() {
     return (
         <View style = {styles.container}> 
-        <Text style = {styles.text}> Welcome! </Text>
+        <Image 
+        style = {styles.image} 
+        source = {require('../assets/icon.png')}/> 
+
+       <Button/>
+
+        <Text style = {styles.text}> Welcome to Appzan ! </Text>
+       
         </View >
     );
 
 
 }
-
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#FCE170'
-
-    },
-
-    text: {
-        color: '#FF0000',
-        fontWeight: 'bold',
-        fontSize: 24,
-
-    },
-
-})

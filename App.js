@@ -1,13 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import InicialScreen from './screens/home';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Your app is opening !</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return  <InicialScreen/> ;
 }
 
 const styles = StyleSheet.create({

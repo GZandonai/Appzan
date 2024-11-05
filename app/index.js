@@ -9,8 +9,6 @@ export default function Page() {
         <Text style={styles.title}>Welcome to Appzan!</Text>
         <Text style={styles.subtitle}>You will never forget your purchases. </Text>
       </View>
-      <Link href={'/home'} 
-      style = {{color:'#FF0000'}} >Do your list</Link>
     </View>
   );
 

@@ -11,7 +11,7 @@ export const Button =(props) => {
             borderRadius: 3,
             width:'60%' ,
             height:30,
-            backgroundColor:'#32CD32',
+            backgroundColor:'#4EFF7F',
             opacity: 0.6,
             alignItems:'center',
             justifyContent: 'center'

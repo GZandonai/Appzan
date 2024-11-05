@@ -16,7 +16,7 @@ export default function RootLayout() {
     
       }}/>
 
-     <Tabs.Screen name = 'home'
+     <Tabs.Screen name = 'list'
      options={{headerTitle:'Your List', 
       title:'Your List',
       tabBarLabelStyle: {fontSize:16, color:'#FA8072'},

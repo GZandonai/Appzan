@@ -1,6 +1,7 @@
 import { Alert, View, Text,Image } from "react-native";
 import { styles } from "../styles/home.js";
 import { Button } from "../components/buttons.js"
+import { Link } from "expo-router";
 
 export default function InicialScreen() {
     const handleSave = () => {
@@ -16,13 +17,13 @@ export default function InicialScreen() {
         style = {styles.image} 
         source = {require('../assets/icon.png')}/> 
 
+        <Text style = {styles.text}> Write your list here </Text>
+        <Button handleSave={handleSave} />
 
-       <Button handleSave={handleSave} />
-
-        <Text style = {styles.text}> Welcome to Appzan ! </Text>
+        
        
         </View >
-    );
+    );  
 
 
 }

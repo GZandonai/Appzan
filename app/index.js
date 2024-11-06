@@ -1,15 +1,16 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, TextStyled, View } from "react-native";
 import { Link } from "expo-router";
+import { TextStyled, ViewStyled } from "../utilities/nativeWind";
 
 
 export default function Page() {
   return (
-    <View style={styles.container}>
-      <View style={styles.main}>
-        <Text style={styles.title}>Welcome to Appzan!</Text>
-        <Text style={styles.subtitle}>You will never forget your purchases. </Text>
-      </View>
-    </View>
+    <ViewStyled style={styles.container}>
+      <ViewStyled style={styles.main}>
+        <TextStyled style={styles.title}>Welcome to Appzan!</TextStyled>
+        <TextStyled style={styles.subtitle}>You will never forget your purchases. </TextStyled>
+      </ViewStyled>
+    </ViewStyled>
   );
 
   

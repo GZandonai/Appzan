@@ -1,8 +1,7 @@
-import { Alert, ViewStyled, TextStyled,Image } from "react-native";
+import { Alert ,Image, View, Text } from "react-native";
 import { styles } from "../styles/list.js";
 import { Button } from "../components/buttons.js"
-import { Link } from "expo-router";
-import { TextStyled, ViewStyled } from "../utilities/nativeWind.js";
+
 
 export default function InicialScreen() {
     const handleSave = () => {
@@ -13,17 +12,17 @@ export default function InicialScreen() {
 
     return (
         
-        <ViewStyled style = {styles.container}> 
+        <View style = {styles.container}> 
         <Image 
         style = {styles.image} 
         source = {require('../assets/icon.png')}/> 
 
-        <TextStyled style = {styles.TextStyled}> Write your list here </TextStyled>
+        <Text style = {styles.Text}> Write your list here </Text>
         <Button handleSave={handleSave} />
 
         
        
-        </ViewStyled >
+        </View >
     );  
 
 

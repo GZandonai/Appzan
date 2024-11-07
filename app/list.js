@@ -1,13 +1,16 @@
-import { Alert ,Image, View, Text } from "react-native";
+import { Alert ,Image, View, Text, TextInput, TouchableOpacity, placeholder} from "react-native";
 import { styles } from "../styles/list.js";
 import { Button } from "../components/buttons.js"
+import { Ionicons } from '@expo/vector-icons';
 
+export default function ScreenList() {
 
-export default function InicialScreen() {
     const handleSave = () => {
-        Alert.alert ('Salvar','Your item was saved.')
-
+        Alert.alert ('Saved','Your item was saved')
     };
+
+
+
 
 
     return (
@@ -16,13 +19,28 @@ export default function InicialScreen() {
         <Image 
         style = {styles.image} 
         source = {require('../assets/icon.png')}/> 
+        
 
         <Text style = {styles.Text}> Write your list here </Text>
-        <Button handleSave={handleSave} />
+
+    
+       <View style ={styles.form}>
+        <TextInput style = {styles.input}
+        placeholder='write here' placeholderTextColor='#696969'    >  
+        </TextInput>
+        <TouchableOpacity style ={styles.button}>
+        <Ionicons name= "add-circle-outline" size={24}/>
+        
+            
+        </TouchableOpacity>
+
+       </View>
+        <Button handleSave={handleSave}/>
+        
+        
+        </View >
 
         
-       
-        </View >
     );  
 
 

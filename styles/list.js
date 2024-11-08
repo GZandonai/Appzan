@@ -39,7 +39,7 @@ export const styles = StyleSheet.create({
     },
 
     input: {
-        height:34,
+        height:42,
         width: '75%',
         backgroundColor:'FF5454',
         borderWidth:1,
@@ -50,7 +50,7 @@ export const styles = StyleSheet.create({
 
     },
 
-    button: {
+    addButton: {
         height: 34,
         width: 34,
         borderRadius:5,
@@ -61,6 +61,56 @@ export const styles = StyleSheet.create({
         
 
     },
+
+    trashButton:{
+        height: 28,
+        width: 24,
+        borderRadius:5,
+        alignItems:'center',
+        justifyContent:'center',
+        
+        
+    
+    },
+
+    checkBox:{
+
+        height: 28,
+        width: 24,
+        alignItems:'center',
+        justifyContent:'center',
+       
+        
+    },
+
+    card:{
+        height:54,
+        width: '75%',
+        borderRadius:5,
+       backgroundColor:'#ffffff',
+       elevation:10,
+
+       flexDirection:'row',
+       justifyContent:'space-between',
+       alignItems:'center',
+       paddingHorizontal:20, 
+
+    }, 
+
+    infoCard:{ 
+        flexDirection:'row',
+        alignItems:'center',
+        gap:10,
+    },
+
+    textItem:{
+        color:'#000000',
+        fontSize:16,
+    },
    
+    cardContainer:{
+        marginTop:5,
+
+    },
 
 })

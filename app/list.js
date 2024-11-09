@@ -14,14 +14,22 @@ export default function ScreenList() {
             setItemList([...itemList, inputValue])
             setInputValue('')
             Alert.alert('Your item was saved')
-
-
-
         } else {
             Alert.alert('You need to write something to add a item')
 
         }
     }
+
+
+    const deleteSaveItems =(itemToDelete) => {
+        const updateList = itemList.filter(item => item != itemToDelete)
+            setItemList(updateList)
+            Alert.alert('Your item was deleted')
+        
+            
+    }
+
+
 
 
     return (
@@ -46,7 +54,7 @@ export default function ScreenList() {
             </View>
 
             <View style={styles.cardContainer}>
-                {/* Aqui é onde a lista de itens será gerada dinamicamente */}
+                {/* here the list will be generated as a dinamic list  */}
                 {itemList.map((item, index) => (
                     <View key={index} style={styles.card}>
                         <View style={styles.infoCard}>
@@ -61,8 +69,9 @@ export default function ScreenList() {
                             <Text style={styles.textItem}>{item}</Text>
                         </View>
 
-                        <TouchableOpacity>
-                            <Ionicons style={styles.trashButton} name="trash-outline" size={24} />
+                        <TouchableOpacity  onPress={() => deleteSaveItems(item)}>
+                            <Ionicons style={styles.trashButton} name="trash-outline" size={24}
+                            />
                         </TouchableOpacity>
                     </View>
                 ))}

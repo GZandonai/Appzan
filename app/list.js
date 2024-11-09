@@ -6,40 +6,30 @@ import { useState } from "react";
 
 export default function ScreenList() {
 
-    const handleSave = () => {
-        Alert.alert('Saved', 'Your item was saved')
-    };
+    const [inputValue, setInputValue] = useState('')
+    const [itemList, setItemList] = useState([])
 
-
-    //variable to save itens from input text
-    const [inputValue, setInputValue] = useState([])
-    //variable to save itens in a list 
-    const [itemsList, setItems] = useState([])
-
-
-    //function to add inputitems from input text field to a list 
-    const handleAddItems = () => {
-        if (inputValue.trim() !== '') {
-            setItems([...itemsList, inputValue])
-            Alert.alert('Your item was saved')
+    const saveItemList = () => {
+        if (inputValue.trim() !== ('')) {
+            setItemList([...itemList, inputValue])
             setInputValue('')
+            Alert.alert('Your item was saved')
+
+
 
         } else {
-            Alert.alert('Please, you need to write something to add in your list')
-        }
+            Alert.alert('You need to write something to add a item')
 
+        }
     }
+
 
     return (
 
         <View style={styles.container}>
-            <Image
-                style={styles.image}
-                source={require('../assets/icon.png')} />
-
-
+            <Image style={styles.image} source={require('../assets/icon.png')} />
+        
             <Text style={styles.Text}> Write your list here </Text>
-
 
             <View style={styles.form}>
                 <TextInput
@@ -47,56 +37,37 @@ export default function ScreenList() {
                     placeholder='write here'
                     placeholderTextColor='#696969'
                     value={inputValue}
-                    onChangeText={setInputValue} />
+                    onChangeText={setInputValue}
+                />
 
-                <TouchableOpacity
-                    style={styles.addButton}
-                    onPress={handleAddItems}>
+                <TouchableOpacity onPress={saveItemList} style={styles.addButton}>
                     <Ionicons name="add-circle-outline" size={24} />
                 </TouchableOpacity>
             </View>
 
-            <View style={styles.card}>
-                <View style={styles.infoCard}>
-                    <TouchableOpacity>
-                        <Ionicons
-                            style={styles.checkBox}
-                            name="checkbox-outline" size={24}></Ionicons>
-                    </TouchableOpacity>
+            <View style={styles.cardContainer}>
+                {/* Aqui é onde a lista de itens será gerada dinamicamente */}
+                {itemList.map((item, index) => (
+                    <View key={index} style={styles.card}>
+                        <View style={styles.infoCard}>
+                            <TouchableOpacity>
+                                <Ionicons
+                                    style={styles.checkBox}
+                                    name="checkbox-outline"
+                                    size={24}
+                                />
+                            </TouchableOpacity>
 
-                    <Text style={styles.textItem}>item 1</Text>
-                </View>
+                            <Text style={styles.textItem}>{item}</Text>
+                        </View>
 
-                <TouchableOpacity>
-                    <Ionicons style={styles.trashButton} name="trash-outline" size={24}></Ionicons>
-
-                </TouchableOpacity>
-
-            </View>
-
-            <View style = {styles.cardContainer}>
-                <View style={styles.card}>
-                    <View style={styles.infoCard}>
                         <TouchableOpacity>
-                            <Ionicons
-                                style={styles.checkBox}
-                                name="checkbox-outline" size={24}></Ionicons>
+                            <Ionicons style={styles.trashButton} name="trash-outline" size={24} />
                         </TouchableOpacity>
-
-                        <Text style={styles.textItem}>item 1</Text>
                     </View>
-
-                    <TouchableOpacity>
-                        <Ionicons style={styles.trashButton} name="trash-outline" size={24}></Ionicons>
-
-                    </TouchableOpacity>
-
-                </View>
+                ))}
             </View>
-
-
-            <Button handleSave={handleSave} />
-        </View >
+        </View>
 
 
     );

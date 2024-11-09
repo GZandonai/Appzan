@@ -27,6 +27,7 @@ export const styles = StyleSheet.create({
         borderColor:'#FF5454',
         borderRadius:50,
         marginBottom:5,
+      
     },
 
     form:{
@@ -35,6 +36,7 @@ export const styles = StyleSheet.create({
         flexDirection:'row',
         alignItems: 'center',
         justifyContent: 'center',
+       
 
     },
 
@@ -110,6 +112,7 @@ export const styles = StyleSheet.create({
    
     cardContainer:{
         marginTop:5,
+        gap:5,
 
     },
 

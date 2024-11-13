@@ -49,17 +49,19 @@ export const styles = StyleSheet.create({
         padding:6,
         fontSize: 14,
         borderColor:'#000',
+       
 
     },
 
     addButton: {
-        height: 34,
-        width: 34,
+        height: 42,
+        width: 40,
         borderRadius:5,
         backgroundColor:'#4EFF7F',
         alignItems:'center',
         justifyContent:'center',
         marginLeft:4,
+                                                                                                                                                                                                                      
         
 
     },

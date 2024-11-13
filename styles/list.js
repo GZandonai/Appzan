@@ -42,7 +42,7 @@ export const styles = StyleSheet.create({
 
     input: {
         height:42,
-        width: '75%',
+        width: '85%',
         backgroundColor:'FF5454',
         borderWidth:1,
         borderRadius: 5,
@@ -86,16 +86,16 @@ export const styles = StyleSheet.create({
     },
 
     card:{
-        height:54,
-        width: '75%',
+        width: '90%',
         borderRadius:5,
-       backgroundColor:'#ffffff',
-       elevation:10,
+        backgroundColor:'#ffffff',
+        elevation:10,
 
-       flexDirection:'row',
-       justifyContent:'space-between',
-       alignItems:'center',
-       paddingHorizontal:20, 
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignItems:'center',
+        paddingVertical:10,
+        paddingHorizontal:20, 
 
     }, 
 
@@ -103,6 +103,7 @@ export const styles = StyleSheet.create({
         flexDirection:'row',
         alignItems:'center',
         gap:10,
+    
     },
 
     textItem:{

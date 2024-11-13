@@ -51,13 +51,14 @@ export default function ScreenList() {
         <View style={styles.container}>
             <Image style={styles.image} source={require('../assets/icon.png')} />
         
-            <Text style={styles.text}>Write your list here</Text>
+            <Text style={styles.text}>Make your list !</Text>
 
             <View style={styles.form}>
                 <TextInput
+                    maxLength={35}
                     style={styles.input}
                     placeholder="write here"
-                    placeholderTextColor="#696969"
+                    placeholderTextColor="#696969"                                                                               
                     value={inputValue}
                     onChangeText={setInputValue}
 

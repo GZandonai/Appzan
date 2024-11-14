@@ -1,4 +1,4 @@
-import { Alert, Image, View, Text, TextInput, TouchableOpacity, FlatList } from "react-native";
+import { Alert, Image, View, Text, TextInput, TouchableOpacity, FlatList,ToastAndroid } from "react-native";
 import { styles } from "../styles/list.js";
 import { Ionicons } from '@expo/vector-icons';
 import { useState } from "react";
@@ -12,7 +12,7 @@ export default function ScreenList() {
         if (inputValue.trim() !== '') {
             setItemList([...itemList, { text: inputValue, isChecked: false }]);
             setInputValue('');
-            Alert.alert('Your item was saved');
+            ToastAndroid.show('Your item was saved', ToastAndroid.SHORT)
         } else {
             Alert.alert('You need to write something to add an item');
         }
@@ -22,7 +22,8 @@ export default function ScreenList() {
     const deleteSaveItems = (itemToDelete) => {
         const updatedList = itemList.filter(item => item.text !== itemToDelete.text);
         setItemList(updatedList);
-        Alert.alert('Your item was deleted');
+        ToastAndroid.show('Your item was deleted', ToastAndroid.SHORT);
+
     };
 
     // function to risk  items in a list when purchased
@@ -41,6 +42,7 @@ export default function ScreenList() {
                     <Ionicons
                         style={styles.checkBox}
                         name={item.isChecked ? "checkbox" : "checkbox-outline"}
+                        color={item.isChecked ? "#0DE170" : "#FF5454"}
                         size={24}
                     />
                 </TouchableOpacity>

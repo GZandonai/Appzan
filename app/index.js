@@ -2,7 +2,8 @@ import { StyleSheet } from "react-native";
 import { View, Text } from "react-native";
 
 
-export default function Page() {
+
+export default function HomeScreen() {
   return (
     <View style ={styles.container}>
       <View style={styles.main}>

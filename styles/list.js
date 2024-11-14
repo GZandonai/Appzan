@@ -119,4 +119,10 @@ export const styles = StyleSheet.create({
 
     },
 
+    textItemChecked: {
+        textDecorationLine: 'line-through', 
+        color: '#000000', 
+    },
+    
+
 })

@@ -14,7 +14,9 @@ export const Button =(props) => {
             backgroundColor:'#4EFF7F',
             opacity: 0.6,
             alignItems:'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            position: 'absolute',
+            bottom: 20,
             
         }} onPress={props.handleSave}>
              <Text>Save</Text>

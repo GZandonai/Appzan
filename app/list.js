@@ -61,7 +61,7 @@ export default function ScreenList() {
         <View style={styles.container}>
             <Image style={styles.image} source={require('../assets/icon.png')} />
         
-            <Text style={styles.text}>Make your list !</Text>
+            <Text style={styles.text}>Make your list!</Text>
 
             <View style={styles.form}>
                 <TextInput
